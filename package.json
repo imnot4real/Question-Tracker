@@ -1,0 +1,19 @@
+{
+  "name": "question-tracker",
+  "version": "1.0.0",
+  "description": "Random question generator with status tracking",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder"
+  },
+  "build": {
+    "icon": "icon"
+  },
+  "devDependencies": {
+    "electron": "^36.4.0",
+    "electron-builder": "^26.0.12",
+    "electron-reload": "^2.0.0-alpha.1"
+  }
+}

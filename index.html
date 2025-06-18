@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Question Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <div class="container">
+            <h1>Question Tracker</h1>
+            <lottie-player 
+                id="catAnimation"
+                src="cat.lottie" 
+                background="transparent" 
+                speed="1" 
+                style="width: 150px; height: 150px; margin: 0 auto;" 
+                loop 
+                autoplay>
+            </lottie-player>
+            <div class="question-display" id="questionDisplay">
+                Click Generate!
+            </div>
+
+            <div class="stats">
+                <div>Total Questions: <span id="totalQuestions">151</span></div>
+                <div>Unattempted: <span id="unattemptedCount">151</span></div>
+                <div>Attempted: <span id="attemptedCount">0</span></div>
+            </div>
+
+            <button class="button" id="generateBtn" onclick="generateRandom()">
+                Generate Random
+            </button>
+
+            <button class="button toggle-button" id="toggleBtn" onclick="toggleQuestionStatus()" disabled>
+                Mark as Attempted
+            </button>
+        </div>
+    <script src="renderer.js"></script>
+</body>
+</html>

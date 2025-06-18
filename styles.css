@@ -1,0 +1,340 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: 
+        linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0.2) 100%),
+        url('img (2).jpg') center/cover no-repeat fixed;
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.12) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 25px 20px;
+    border-radius: 20px;
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.4),
+        0 5px 15px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+    text-align: center;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+h1 {
+    font-family: 'Milkyway', sans-serif;
+    color: rgba(119, 165, 60, 0.76);
+    margin-bottom: 13px;
+    font-size: 2.2em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+}
+
+.question-display {
+    font-family: 'funkySmile', sans-serif;
+    padding: 10px;
+    font-size: 35px;
+    color: rgba(255, 255, 255, 0.804);
+    margin: 10px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.045);
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.question-display:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 
+        0 12px 25px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.stats {
+    font-family: 'MessyHandwritten-Regular';
+    margin: 30px 0;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.070);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.785);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.stats div {
+    margin: 8px 0;
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.82);
+    font-weight: 900;
+}
+
+.stats span {
+    font-weight: bold;
+    color: rgba(120, 165, 60, 0.578);
+}
+
+.button {
+    font-family: 'MessyHandwritten-Regular';
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    margin: 8px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 550;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    min-width: 160px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 12px 30px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+}
+
+.button:active {
+    transform: translateY(0);
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.button:disabled {
+    background: linear-gradient(135deg, rgba(108, 117, 125, 0.3) 0%, rgba(134, 142, 150, 0.3) 100%);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: 
+        0 4px 10px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Toggle Switch Styles */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 15px;
+}
+
+.toggle-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    background: linear-gradient(135deg, #f44336 0%, #e91e63 100%);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 8px 20px rgba(244, 67, 54, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    outline: none;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.toggle-switch:hover {
+    box-shadow: 
+        0 12px 30px rgba(244, 67, 54, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.toggle-switch:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+    background: linear-gradient(135deg, rgba(108, 117, 125, 0.3) 0%, rgba(134, 142, 150, 0.3) 100%);
+    box-shadow: 
+        0 4px 10px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transform: none;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.toggle-switch:disabled:hover {
+    box-shadow: 
+        0 4px 10px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transform: none;
+}
+
+.toggle-switch.attempted {
+    background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+    box-shadow: 
+        0 8px 20px rgba(76, 175, 80, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.toggle-switch.attempted:hover {
+    box-shadow: 
+        0 12px 30px rgba(76, 175, 80, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.toggle-slider {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.toggle-switch.attempted .toggle-slider {
+    transform: translateX(70px);
+}
+
+.toggle-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    transition: opacity 0.3s ease;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.toggle-text.left {
+    left: 10px;
+    opacity: 1;
+}
+
+.toggle-text.right {
+    right: 10px;
+    opacity: 0;
+}
+
+.toggle-switch.attempted .toggle-text.left {
+    opacity: 0;
+}
+
+.toggle-switch.attempted .toggle-text.right {
+    opacity: 1;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 25px 20px;
+    }
+    
+    .question-display {
+        font-size: 42px;
+        min-height: 60px;
+        margin: 25px 0;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    .button {
+        padding: 12px 20px;
+        font-size: 14px;
+        min-width: 140px;
+    }
+}
+@font-face {
+  font-family: 'Milkyway';
+  src: url('fonts/font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'funkySmile';
+  src: url('fonts/funky-smile.regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MessyHandwritten-Regular';
+  src: url('fonts/MessyHandwritten-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
